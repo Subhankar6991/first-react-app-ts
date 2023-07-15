@@ -9,7 +9,7 @@ import ShowFigma from './componets/show/ShowFigma';
 
 function App(): React.JSX.Element {
   return (
-    <ShowChartBar />
+    <ShowAccordion />
   );
 }
 export default App;
