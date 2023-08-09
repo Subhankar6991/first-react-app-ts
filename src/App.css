@@ -1,0 +1,48 @@
+.container {
+  width: 300px; /* Set the width of the container to limit the visible area */
+  overflow-x: auto; /* Enable horizontal scrolling when content overflows */
+  /* white-space: nowrap; Prevent items from wrapping to a new line */
+  position: relative;
+  height: 800px;
+  margin-top: 300px;
+}
+
+.content {
+  /* Set some styles for the content, e.g., padding, margin, etc. */
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.item {
+  /* Set styles for individual items within the content */
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+
+/* Custom scrollbar styles */
+.container::-webkit-scrollbar {
+  height: 12px; /* Height of the scrollbar */
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #c63e3e; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Border radius of the scrollbar thumb */
+}
+
+/* Sticky horizontal scrollbar styles */
+.container {
+  overflow-x: scroll;
+}
+
+.content {
+  margin-bottom: 12px; /* Ensure some space at the bottom to accommodate the scrollbar */
+}
+
+.container::-webkit-scrollbar-track:horizontal {
+  /* Apply styles only for the horizontal scrollbar */
+  position: sticky;
+  bottom: 100;
+  z-index: 1; /* Ensure the scrollbar appears above the content */
+}
